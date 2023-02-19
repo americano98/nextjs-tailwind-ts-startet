@@ -1,18 +1,15 @@
-import './globals.css'
+import LayoutMain from 'layouts/layout-main/layout-main';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
-    </html>
-  )
-}
+import 'styles/main.css';
+
+// eslint-disable-next-line react/prop-types
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
+  <html lang="en">
+    <head />
+    <body>
+      <LayoutMain>{children}</LayoutMain>
+    </body>
+  </html>
+);
+
+export default RootLayout;
